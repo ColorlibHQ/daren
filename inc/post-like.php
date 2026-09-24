@@ -10,7 +10,7 @@
 add_action( 'wp_enqueue_scripts', 'daren_sl_enqueue_scripts' );
 function daren_sl_enqueue_scripts() {
 
-	wp_enqueue_script( 'daren-post-likes', DAREN_DIR_JS_URI . 'post-likes.js', array( 'jquery' ), '0.5', false );
+	wp_enqueue_script( 'daren-post-likes', DAREN_DIR_JS_URI . 'post-likes.js', array( 'daren-ui-js' ), '0.5-s2', true );
 
 	wp_localize_script( 'daren-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),

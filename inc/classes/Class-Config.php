@@ -223,23 +223,23 @@
 					array(
 						'handler'		=> 'daren-theme-bootstrap',
 						'file' 			=> $jsPath.'bootstrap.min.js',
-						'dependency' 	=> array( 'jquery' ),
+						'dependency' 	=> array(),
 						'version' 		=> '5.3.8-4',
 						'in_footer' 	=> true
 					),
 
 					array(
 						'handler'		=> 'daren-ui-js',
-						'file' 			=> $jsPath.'colorlib-ui.js',
+						'file' 			=> $jsPath . ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'colorlib-ui.js' : 'colorlib-ui.min.js' ),
 						'dependency' 	=> array(),
-						'version' 		=> '2.1.1',
+						'version' 		=> '3.0.0',
 						'in_footer' 	=> true
 					),
 					array(
 						'handler'		=> 'daren-theme-daren-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery', 'jquery-form', 'daren-ui-js' ),
-						'version' 		=> $this->daren_version . '-s1',
+						'dependency' 	=> array( 'daren-ui-js' ),
+						'version' 		=> $this->daren_version . '-s2',
 						'in_footer' 	=> true
 					),
 
