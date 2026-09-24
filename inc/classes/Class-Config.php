@@ -227,19 +227,19 @@
 						'version' 		=> '5.3.8-4',
 						'in_footer' 	=> true
 					),
+
 					array(
-						'handler'		=> 'instagramFeed',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '4.3.1',
+						'handler'		=> 'daren-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
 						'in_footer' 	=> true
 					),
-
 					array(
 						'handler'		=> 'daren-theme-daren-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery', 'jquery-form' ),
-						'version' 		=> $this->daren_version,
+						'dependency' 	=> array( 'jquery', 'jquery-form', 'daren-ui-js' ),
+						'version' 		=> $this->daren_version . '-s1',
 						'in_footer' 	=> true
 					),
 
