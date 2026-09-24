@@ -14,6 +14,7 @@ function daren_sl_enqueue_scripts() {
 
 	wp_localize_script( 'daren-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'like'    => esc_html__( 'Like', 'daren' ),
 		'unlike'  => esc_html__( 'Unlike', 'daren' )
 	) );
 }
